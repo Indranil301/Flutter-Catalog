@@ -12,9 +12,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true),
-      initialRoute:"/",
-      routes: {"/": (context)=> HomePage()},
+      theme: ThemeData(
+        useMaterial3: true,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.deepPurple,
+          foregroundColor: Colors.white,
+        ),
+      ),
+      initialRoute: "/",
+      routes: {"/": (context) => HomePage()},
     );
   }
 }
